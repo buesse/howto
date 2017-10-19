@@ -7,13 +7,15 @@
 2. Open a Terminal
 3. Determine the USB drive
 4. Format the USB drive
-   `sudo diskutil eraseDisk JHFS+ USB disk1`
+```
+sudo diskutil eraseDisk JHFS+ USB disk1`
+```
 5. Create the Install Media
 ```
 sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia \
 --volume /Volumes/USB --applicationpath  /Applications/Install\ macOS\ High\ Sierra.app --nointeraction
 ```
-6. Download latest Clover from http://sourceforge.net/projects/cloverefiboot/
+6. Download latest [Clover](http://sourceforge.net/projects/cloverefiboot/)
 7. Open Clover package installer, choose the Install Location „Install macOS High Sierra“
 8. Customize and check
 ```
@@ -65,7 +67,7 @@ v Install RC Scripts on Target volume
 
 [Source](https://www.tonymacx86.com/threads/nvidia-releases-alternate-graphics-drivers-for-macos-high-sierra-10-13-0-378-10-10-10-15.225522/)
 
-1. Download from https://images.nvidia.com/mac/pkg/378/WebDriver-378.10.10.10.15.117.pkg
+1. Download [Driver](https://images.nvidia.com/mac/pkg/378/WebDriver-378.10.10.10.15.117.pkg)
 2. Modify EFI config.plist 
 ```
 Enable SIP by changing CsrActiveConfig from 0x3 to 0x0
@@ -87,7 +89,7 @@ Change Boot Parameters replace nv_disable=1 with nvda_drv=1
 
 [Source](https://github.com/toleda/audio_CloverALC)
 
-1. Download https://github.com/toleda/audio_CloverALC/blob/master/audio_cloverALC-130.command.zip
+1. Download [CloverALC](https://github.com/toleda/audio_CloverALC/blob/master/audio_cloverALC-130.command.zip)
 2. Mount EFI partition
 3. Run audio_cloverALC-130.command and approve under Security Settings
 4. Answer the scripts questions
